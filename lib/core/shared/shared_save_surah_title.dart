@@ -28,7 +28,6 @@ class SharedUtils {
   // set String in Shared direct
   static Future<void> setString(String key, String value) async {
     await sharedPreferences?.setString(key, value);
-
   }
 
 // make to return String
@@ -42,7 +41,7 @@ class SharedUtils {
   }
 
 // make to return bool
-  static bool getBool(String key, [bool deValue = false]) {
+  static bool getBool(String key, [bool deValue = true]) {
     return sharedPreferences!.getBool(key) ?? deValue;
   }
 

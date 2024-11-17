@@ -50,20 +50,22 @@ class CustomerTimeAdan extends StatelessWidget {
                     style: Styles.textStyle20),
                 Text(LocationCubit.get(context).nextPrayerTime,
                     style: Styles.textStyle20),
-                Row(
-                  textDirection: TextDirection.rtl,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.location_on),
-                    const SizedBox(
-                      width: 3,
-                    ),
-                    Text(
-                      ' ${LocationCubit.get(context).place.administrativeArea}-${LocationCubit.get(context).place.subAdministrativeArea}',
-                      style: Styles.textStyle17,
-                    )
-                  ],
-                )
+                LocationCubit.get(context).place.administrativeArea == null
+                    ? const SizedBox()
+                    : Row(
+                        textDirection: TextDirection.rtl,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.location_on),
+                          const SizedBox(
+                            width: 3,
+                          ),
+                          Text(
+                            ' ${LocationCubit.get(context).place.administrativeArea}-${LocationCubit.get(context).place.subAdministrativeArea}',
+                            style: Styles.textStyle17,
+                          )
+                        ],
+                      ),
               ],
             ),
           ),

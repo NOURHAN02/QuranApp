@@ -13,16 +13,14 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     nav();
-    firstTime();
-    SharedUtils.setBool("firstTime", false);
   }
 
   void nav() async {
     await Future.delayed(const Duration(seconds: 3));
-    Navigator.push(
+    await SharedUtils.setBool("firstTime", false);
+    Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => const HomeView()));
   }
 

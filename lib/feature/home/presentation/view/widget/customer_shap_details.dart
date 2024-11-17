@@ -12,19 +12,19 @@ class CustomerShapeDetails extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleWidget(),
-           SizedBox(
+          SizedBox(
             width: 10,
           ),
           LineWidget(),
-           SizedBox(
+          SizedBox(
             width: 10,
           ),
           CircleWidget(),
-           SizedBox(
+          SizedBox(
             width: 10,
           ),
           LineWidget(),
-           SizedBox(
+          SizedBox(
             width: 10,
           ),
           CircleWidget(),

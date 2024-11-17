@@ -32,7 +32,7 @@ class LocationCubit extends Cubit<LocationStates> {
         desiredAccuracy: LocationAccuracy.high);
   }
 
-  late Placemark place;
+  Placemark place = const Placemark(locality: "", country: "");
   Future<void> getLocation() async {
     try {
       Position position = await determinePosition();
@@ -51,7 +51,7 @@ class LocationCubit extends Cubit<LocationStates> {
     return formatter.format(now);
   }
 
-  String nextPrayerName = '';
+  String nextPrayerName = 'There is no prayer time';
   String nextPrayerTime = '';
 
   Future<void> getAdan() async {
@@ -77,8 +77,9 @@ class LocationCubit extends Cubit<LocationStates> {
             (nextAdanTime == null || adanTime.isBefore(nextAdanTime!))) {
           nextAdanTime = adanTime;
           String time12Hour = DateFormat("h:mm a").format(nextAdanTime!);
+
           nextPrayerName = payName;
-          nextPrayerTime = time12Hour;
+          nextPrayerTime = payName == "Midnight" ? " 12:00 am" : time12Hour;
         }
       });
       emit(SuccessAdanStates());

@@ -7,8 +7,8 @@ class SurahNameCubit extends Cubit<SurahNAmeStates> {
   static SurahNameCubit get(context) => BlocProvider.of(context);
   Future<void> fetchSurahName() async {
     emit(LoadingNameSurahStates());
-    var surahName =  SharedUtils.getString("surahQuranSave");
-    var surahId =  SharedUtils.getInt("SurahId");
+    var surahName = SharedUtils.getString("surahQuranSave", "The Opening");
+    var surahId = SharedUtils.getInt("SurahId", 1);
     emit(SuccessNameSurahStates(surahName, surahId));
   }
 }

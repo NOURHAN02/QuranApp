@@ -5,7 +5,6 @@ import 'package:quran_app/feature/home/presentation/view/customer_tap_ber.dart';
 import 'package:quran_app/feature/home/presentation/view/widget/customer_adan.dart';
 import 'package:quran_app/feature/home/presentation/view/widget/customer_last_read.dart';
 
-
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 

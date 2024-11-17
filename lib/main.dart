@@ -15,13 +15,15 @@ void main() async {
   Bloc.observer = MyBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
   await SharedUtils.init();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final isFirstTime = SharedUtils.getBool("firstTime");
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -49,9 +51,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark().copyWith(
           appBarTheme: const AppBarTheme(),
         ),
-        home: SharedUtils.getBool("firstTime") == true
-            ? const SplashView()
-            : const HomeView(),
+        home: isFirstTime ? const SplashView() : const HomeView(),
       ),
     );
   }
