@@ -1,16 +1,15 @@
-# quran_app
+# QuranApp
 
-A new Flutter project.
+## 📖 عن التطبيق
+تطبيق "QuranApp" هو تطبيق Flutter لتصفح سور القرآن الكريم والوصول السريع إلى الآيات.
 
-## Getting Started
+## 🚀 المميزات
+- البحث عن السور.
+- الانتقال إلى الصفحة المطلوبة.
+- استخدام Bloc لإدارة الحالة.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📋 خطوات الإعداد
+1. قم بتثبيت [Flutter](https://flutter.dev/docs/get-started/install).
+2. انسخ الريبو:
+   ```bash
+   git clone https://github.com/NOURHAN02/QuranApp.git
