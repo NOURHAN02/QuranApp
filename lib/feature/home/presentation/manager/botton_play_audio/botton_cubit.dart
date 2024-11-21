@@ -33,7 +33,6 @@ class BottonCubit extends Cubit<BottonStates> {
 
   Future<void> _playAyah(AyahsModel ayah) async {
     currentAyah = ayah.numberInSurah;
-
     emit(AyahNumberStateUpdate(currentAyah));
     await audioPlay.play(UrlSource(ayah.audio));
     await audioPlay.onPlayerComplete.first;
