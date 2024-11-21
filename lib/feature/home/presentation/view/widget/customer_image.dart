@@ -14,11 +14,6 @@ class CustomerImage extends StatelessWidget {
         ], begin: Alignment.topLeft, end: Alignment.bottomRight),
       ),
     );
-    // return ClipRRect(
-    //   borderRadius: BorderRadius.circular(16.0),
-    //   child: AspectRatio(aspectRatio: 2.5/1,
-    //     child: Image.asset("assets/images/img_2.png",fit: BoxFit.fill,),),
-    //
-    // );
+
   }
 }
